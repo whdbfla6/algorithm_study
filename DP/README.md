@@ -1,3 +1,6 @@
+## Dynamic Programming
+
+
 | 문제 |  제목 및 풀이 | 난이도 | 푼문제 | 푼날짜 |    
 | :-----: | :-----: | :-----: | :-----: | :-----: | 
 | [1149](https://www.acmicpc.net/problem/1149) | [RGB거리](https://github.com/whdbfla6/algorithm_study/blob/main/DP/1149.py) | 실버1 | ✅ |  8/3  |
@@ -10,8 +13,8 @@
 | [11053](https://www.acmicpc.net/problem/11053) | [가장 긴 증가하는 부분 수열](https://github.com/whdbfla6/algorithm_study/blob/main/DP/11053.py) | 실버2 | ✔️ |  8/4  |
 | [11727](https://www.acmicpc.net/problem/11727) | [2×n 타일링 2](https://github.com/whdbfla6/algorithm_study/blob/main/DP/11727.py) | 실버3 | ✔️ |  8/3  |
 | [21317](https://www.acmicpc.net/problem/21317) | [징검다리 건너기](https://github.com/whdbfla6/algorithm_study/blob/main/DP/21317.py) | 실버2 | ✔️ |  8/4  |
-| [2293](https://www.acmicpc.net/problem/2293) | 🌟 [동전 1](https://github.com/whdbfla6/algorithm_study/blob/main/DP/2293.py)  | 골드5 | ✅  |  8/5  |
-| [2293](https://www.acmicpc.net/problem/2294) | [동전 2](https://github.com/whdbfla6/algorithm_study/blob/main/DP/2294.py) | 골드5 | ✔️ |  8/5  |
+| [2293](https://www.acmicpc.net/problem/2293) | [동전 1](https://github.com/whdbfla6/algorithm_study/blob/main/DP/2293.py)  | 골드5 | ✅  |  8/5  |
+| [2294](https://www.acmicpc.net/problem/2294) | [🌟 동전 2](https://github.com/whdbfla6/algorithm_study/blob/main/DP/2294.py) | 골드5 | ✔️ |  8/5  |
 
 
 - ✔️ 푼 문제 
