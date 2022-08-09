@@ -19,6 +19,8 @@
 | [14852](https://www.acmicpc.net/problem/14852) | [타일채우기 3](https://github.com/whdbfla6/algorithm_study/blob/main/DP/14852.py) | 실버1 | ❎ |  -  |
 | [12852](https://www.acmicpc.net/problem/12852) | [1로 만들기2](https://github.com/whdbfla6/algorithm_study/blob/main/DP/12852.py) | 실버1 | ✔️ |  8/6  |
 | [2096](https://www.acmicpc.net/problem/2096) | [🌟 내려가기](https://github.com/whdbfla6/algorithm_study/blob/main/DP/2096.py) | 골드5 | ❎ |  -  |
+| [1890](https://www.acmicpc.net/problem/1890) | [점프하기](https://github.com/whdbfla6/algorithm_study/blob/main/DP/1890.py) | 실버2 | ✅ |  8/9  |
+| [1660](https://www.acmicpc.net/problem/1660) | [캡틴 이다솜](https://github.com/whdbfla6/algorithm_study/blob/main/DP/1660.py) | 실버1 | ✔️ |  8/9  |
 
 - ✔️ 푼 문제 
 - ✅ 힌트 얻고 푼 문제 
