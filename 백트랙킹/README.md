@@ -3,7 +3,7 @@
 
 | 문제 |  제목 및 풀이 | 난이도 | 푼문제 | 푼날짜 |  
 | :-----: | :-----: | :-----: | :-----: | :-----: | 
-| [15949](https://www.acmicpc.net/problem/2146) | [N과M(1)](https://github.com/whdbfla6/algorithm_study/blob/main/백트래킹/15949.py) | 실버3 | ✅ |  9/7  |
+| [15949](https://www.acmicpc.net/problem/2146) | [N과M(1)](https://github.com/whdbfla6/algorithm_study/blob/main/백트래킹/15649.py) | 실버3 | ✅ |  9/7  |
 
 
 - ✔️ 푼 문제 
