@@ -7,7 +7,6 @@ class Dlist:
             self.val = val
 
     def __init__(self):
-        
 
         self.head = self.Node(prev=None,next=None,val=None)
         self.tail = self.Node(prev=None,next=None,val=None)
