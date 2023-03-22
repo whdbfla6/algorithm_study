@@ -7,7 +7,6 @@ arr = [[[] for _ in range(N)] for _ in range(N)]
 info = {}
 for i in range(1,K+1):
     x,y,d = map(int,input().split())
-    n = len(arr[x-1][y-1])
     arr[x-1][y-1].append(i)
     info[i] = (d,x-1,y-1) #방향,x,y
 
