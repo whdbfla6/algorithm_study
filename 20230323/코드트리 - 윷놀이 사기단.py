@@ -17,11 +17,11 @@ route.append([(0,15),(1,5),(1,6),(1,7)]+tmp) # 30부터
 dice = list(map(int,input().split()))
 
 def route_check(x,y):
-    if x == 0 and y == 5: #(0, 4):10
+    if x == 0 and y == 5: #(0, 5):10
         return 1
-    elif x == 0 and y == 10: #(0, 9): 20
+    elif x == 0 and y == 10: #(0, 10): 20
         return 2
-    elif x == 0 and y == 15: #(0, 14): 30
+    elif x == 0 and y == 15: #(0, 15): 30
         return 3
     else:
         return 0
