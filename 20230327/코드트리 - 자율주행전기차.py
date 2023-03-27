@@ -12,7 +12,7 @@ for num in range(2,M+2):
     info[num] = (x2,y2)
     arr[x1][y1] = num
 
-from collections import deque\
+from collections import deque
 
 dx,dy = [1,0,-1,0],[0,1,0,-1]
 
