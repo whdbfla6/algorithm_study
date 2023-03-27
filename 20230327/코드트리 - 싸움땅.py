@@ -133,6 +133,7 @@ def winner_action(x,y,pnum):
     '''
     [input] 싸우는 위치, 이긴 사람 번호
     '''
+    players[x][y] = pnum #싸우던 위치는 승자가 차지!
     get_gun(x,y,pnum) #총 줍기
 
 
@@ -153,7 +154,6 @@ def move_all_player():
             p2 = players[nx][ny]
             winner, loser = fight(pnum,p2)
             loser_action(nx,ny,loser)
-            players[nx][ny] = winner #싸우던 위치는 승자가 차지!
             winner_action(nx,ny,winner)
 
 
