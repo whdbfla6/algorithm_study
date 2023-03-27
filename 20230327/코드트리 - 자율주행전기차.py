@@ -91,29 +91,25 @@ def go_to_destination(ex,ey):
     return -1
 
 
-flag = True
 
 def ride():
-    global flag,C
+    global C
     num,dist = go_to_person()
     if dist <0:
-        flag = False
-        return
+        return False
     C -= dist
     if C <= 0:
-        flag = False
-        return
-    else:
-        ex,ey = info[num]
-        dist = go_to_destination(ex,ey)
-        if dist < 0:
-            flag = False
-            return
-        C -= dist
-        if C < 0:
-            flag = False
-            return
-        C += dist * 2
+        return False
+
+    ex,ey = info[num]
+    dist = go_to_destination(ex,ey)
+    if dist < 0:
+        return False
+    C -= dist
+    if C < 0:
+        return False
+    C += dist * 2
+    return True
     
 def debug():
     print('자동차 위치: ',sx,sy)
@@ -123,7 +119,7 @@ def debug():
     print()
 
 for _ in range(M):
-    ride()
+    flag = ride()
     if not flag:
         print(-1)
         break
