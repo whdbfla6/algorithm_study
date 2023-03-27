@@ -100,10 +100,7 @@ def fight(p1,p2):
 
     diff = abs(s1+g1-s2-g2)
 
-    if s1+g1 == s2+g2 and s1 > s2:
-        point[p1-1] += diff
-        return p1,p2
-    elif s1+g1 > s2+g2:
+    if (s1+g1,s1) > (s2+g2,s2):
         point[p1-1] += diff
         return p1,p2
     else:
