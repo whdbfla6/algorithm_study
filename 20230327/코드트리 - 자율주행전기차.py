@@ -42,7 +42,6 @@ def go_to_person():
         elif arr[x][y] > 1:
             ax.append((x,y))
 
-
         for i in range(4):
             nx = x+dx[i]
             ny = y+dy[i]
@@ -62,7 +61,6 @@ def go_to_person():
     arr[x][y] = 0
         
     return num,distance
-
 
 def go_to_destination(ex,ey):
     '''
