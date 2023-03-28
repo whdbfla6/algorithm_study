@@ -1,3 +1,2 @@
-import sys
-sys.stdin = open('input.txt','rt')
+# 마법사 상어와 파이어볼 동일한 문제
 
