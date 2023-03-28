@@ -90,6 +90,8 @@ def move_down():
                 for ux in range(x,-1,-1):
                     if arr[ux][y]>0:
                         arr[ux+1][y],arr[ux][y] = arr[ux][y],0
+                    else:
+                        break
 
 def simulation(num,col):
     move_block_down(num,col) # 블록 하나 내려옴
