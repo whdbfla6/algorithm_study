@@ -1,7 +1,3 @@
-import sys
-sys.stdin = open('input.txt','rt')
-
-
 N = int(input())
 dx,dy = [0,-1,-1,0,1,1,1,0,-1],[0,0,-1,-1,-1,0,1,1,1]
 
@@ -38,23 +34,16 @@ def get_point():
     가장 위부터 확인하면서 블록 4개발견하면 그 윗부분 블록 하나씩 내리기
     '''
     point = 0
-    flag = True
+    for x in range(R-1,-1,-1):
+        cnt = 0
+        for y in range(C):
+            if arr[x][y] > 0: 
+                cnt += 1
 
-    while flag:
-        flag = False
-        for x in range(R-1,-1,-1):
-            cnt = 0
-            for y in range(C):
-                if arr[x][y] > 0: 
-                    cnt += 1
+        if cnt == 4:
+            arr[x] = [0]*4
+            point += 1
 
-            if cnt == 4:
-                flag = True
-                arr[x] = [0]*4
-                point += 1
-                for nx in range(x-1,-1,-1):
-                    for ny in range(C):
-                        if arr[nx][ny]>0: arr[nx+1][ny],arr[nx][ny] = arr[nx][ny],0
     return point
 
 
@@ -66,7 +55,7 @@ def next_position(x,y,num):
     for i in dir_info[num]:
         nx = x+dx[i]
         ny = y+dy[i]
-        if 0<=nx<N and 0<=ny<N:
+        if 0<=nx<R and 0<=ny<C:
             return nx,ny
 
 
@@ -89,7 +78,6 @@ def move_block():
                     arr_[nx][ny] = arr[x][y]
 
     arr = arr_
-
 
 def move_down():
     '''
@@ -116,32 +104,3 @@ def simulation(num,col):
     move_down()
 
     return point
-
-answer = 0
-import copy
-block_info = [list(map(int,input().split())) for _ in range(N)]
-
-def DFS(depth,summ):
-    global answer,arr
-
-    if depth == N:
-        answer = max(answer,summ)
-        return
-
-    num, col = block_info[depth]
-
-    if col == 0:
-        for c in range(1,5):
-            arr_ = copy.deepcopy(arr)
-            point = simulation(num,c)
-            DFS(depth+1,summ + point)
-
-            arr = arr_ #원래 행렬로 만들어줌
-    else:
-        point = simulation(num,col)
-        DFS(depth+1,summ + point)
-
-
-
-DFS(0,0)
-print(answer)
