@@ -5,7 +5,7 @@ dir_info = {}
 for i in range(1,9):
     dir_info[i] = list(map(int,input().split()))
 
-R,C = 100,4
+R,C = 101,4
 arr = [[0]*C for _ in range(R)]
 
 def debug():
