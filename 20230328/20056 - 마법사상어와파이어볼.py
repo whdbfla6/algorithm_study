@@ -50,24 +50,20 @@ def combine_fireball(x,y):
     msum,ssum,cnt = 0,0,0
 
     remain = arr[x][y][0][-1] % 2 # 첫번째 파이어볼 방향
-    flag = True
+    dlist = [0,2,4,6]
 
     for m,s,d in arr[x][y]:
         msum += m
         ssum += s
         cnt += 1
         if remain != d % 2: # 방향의 나머지가 다른 경우
-            flag = False
+            dlist = [1,3,5,7]
 
     newm, news = msum//5, ssum//cnt
     arr[x][y] = [] # 일단 빈 배열로 만들어주고 -> 새로운 파이어볼 4개로 채워주기
 
     if newm == 0: # 질량이 0인 파이어볼은 소멸되어 없어진다
         return
-    
-    dlist = [1,3,5,7]
-    if flag:  
-        dlist = [0,2,4,6]
     
     for newd in dlist:
         arr[x][y].append([newm,news,newd])
