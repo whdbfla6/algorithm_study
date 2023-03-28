@@ -31,18 +31,6 @@ def move_block_down(num,col):
             break
     else:
         arr[R-1][col] = num
-    
-    # if arr[0][col] == num:
-    #     arr.insert(0,[0]*C)
-    #     R += 1
-
-# R,C = 5,4
-# arr = [[0,0,0,0],[0,0,0,0],[2,0,0,0],[1,1,8,0],[5,0,0,0]]
-# debug()
-# move_block_down(2,1)
-# move_block_down(5,1)
-# move_block_down(6,1)
-# debug()
 
 def get_point():
     '''
@@ -116,15 +104,15 @@ def move_down():
                         arr[ux+1][y],arr[ux][y] = arr[ux][y],0
 
 def simulation(num,col):
-    move_block_down(num,col)
+    move_block_down(num,col) # 블록 하나 내려옴
 
-    point = get_point()
+    point = get_point() # 4개 열 채워지는 경우 지워줌
     move_down()
 
-    move_block()
+    move_block() # 방향 순서에 따라 움직임
     move_down()
 
-    point += get_point()
+    point += get_point() #열이 다시 채워지는 경우 지워줌
     move_down()
 
     return point
@@ -148,7 +136,7 @@ def DFS(depth,summ):
             point = simulation(num,c)
             DFS(depth+1,summ + point)
 
-            arr = arr_
+            arr = arr_ #원래 행렬로 만들어줌
     else:
         point = simulation(num,col)
         DFS(depth+1,summ + point)
