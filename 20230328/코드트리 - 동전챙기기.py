@@ -42,7 +42,7 @@ def BFS(sx,sy):
             if arr[nx][ny] in nums: #코인이 존재, 코인을 주울 거!
                 newcoin = int(arr[nx][ny])
                 if len(coins)==0 or newcoin > coins[-1]: #코인이 없거나, 오름차순이거나
-                    coin_ = coins[:] + [int(arr[nx][ny])]
+                    coin_ = coins[:] + [newcoin]
                     deq.append((nx,ny,cnt+1,coin_))
     else:
         print(-1)
