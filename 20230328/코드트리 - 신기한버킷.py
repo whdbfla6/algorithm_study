@@ -104,3 +104,31 @@ def simulation(num,col):
     move_down()
 
     return point
+
+answer = 0
+block_info = [list(map(int,input().split())) for _ in range(N)]
+
+import copy
+
+def DFS(depth,summ):
+    global answer,arr
+
+    if depth == N:
+        answer = max(answer,summ)
+        return
+
+    num, col = block_info[depth]
+
+    if col == 0:
+        for c in range(1,5):
+            arr_ = copy.deepcopy(arr)
+            point = simulation(num,c)
+            DFS(depth+1,summ + point)
+
+            arr = arr_ #원래 행렬로 만들어줌
+    else:
+        point = simulation(num,col)
+        DFS(depth+1,summ + point)
+
+DFS(0,0)
+print(answer)
