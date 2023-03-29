@@ -45,22 +45,29 @@ def find_line(sx,sy):
     
     return ax, cnt
 
-def move():
+def move(m):
+    '''
+    m번째 팀 한칸씩 이동
+    [input] 팀 번호
+    '''
+    ax,cnt = team_info[m]
+    x,y = ax[cnt-1]
+    arr[x][y] = [0,0]
+    ax = [ax[-1]] + ax[:-1]
+    
+    for i in range(cnt):
+        x,y = ax[i]
+        arr[x][y] = [i+1,m]
+    
+    team_info[m] = ax,cnt
+
+def move_all():
     '''
     총 M명인 경우 arr[M-1]은 0으로 바꿔주고 
     [-1] 좌표가 맨 앞으로 와서 -> 앞에서 M-1까지 1~M 채워주기
     '''
     for m in range(1,M+1):
-        ax,cnt = team_info[m]
-        x,y = ax[cnt-1]
-        arr[x][y] = [0,0]
-        ax = [ax[-1]] + ax[:-1]
-        
-        for i in range(cnt):
-            x,y = ax[i]
-            arr[x][y] = [i+1,m]
-        
-        team_info[m] = ax,cnt
+        move(m)
 
 def ball_position(r_num):
     '''
@@ -138,6 +145,6 @@ def debug():
 
 answer = 0
 for r_num in range(1,K+1):
-    move()
+    move_all()
     answer += throw_ball(r_num)
 print(answer)
