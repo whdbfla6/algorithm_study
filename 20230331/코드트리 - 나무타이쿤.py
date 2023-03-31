@@ -9,12 +9,6 @@ info.insert(0,[])
 dx,dy = [0,0,-1,-1,-1,0,1,1,1],[0,1,1,0,-1,-1,-1,0,1]
 pos = [(N-2,0),(N-2,1),(N-1,0),(N-1,1)]
 
-def debug():
-    print(pos)
-    for a in arr:
-        print(a)
-    print()
-
 def move(level):
     '''
     [인풋] 영양제 위치 리스트

@@ -14,11 +14,6 @@ dx,dy = [0,1,0,-1],[1,0,-1,0]
 CENTER = N//2
 POINT = 0
 
-def debug():
-    for a in arr:
-        print(a)
-    print()
-
 def attack_monster(level):
     '''
     몬스터 공격해서 제거
@@ -31,7 +26,6 @@ def attack_monster(level):
         x,y = x+dx[d], y+dy[d]
         POINT += arr[x][y]
         arr[x][y] = -1
-
 
 
 def make_one_dimension():
@@ -107,6 +101,7 @@ def one_dimension_to_arr(res):
 
     arr = arr_
 
+
 def remove_continuous_monster(res):
     '''
     4번 이상 등장하는 몬스터 죽이기
@@ -135,6 +130,7 @@ def remove_continuous_monster(res):
 
     return newres
 
+
 def make_pair(res):
 
     newres = deque()
@@ -155,8 +151,8 @@ def make_pair(res):
         newres.extend([cnt,num])
 
     newres.appendleft(0)
-
     return newres
+
 
 for i in range(1,M+1):
 
