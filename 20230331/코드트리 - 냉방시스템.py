@@ -128,6 +128,3 @@ def solution():
         print(-1)
 
 solution()
-
-
-
