@@ -27,6 +27,8 @@ def attack(x,y):
             distance = dist
             if dist <= D:
                 ax.append((x,y))
+            else:
+                break
 
         for i in range(4):
             nx = x+dx[i]
