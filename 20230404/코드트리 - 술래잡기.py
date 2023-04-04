@@ -49,7 +49,6 @@ def first():
 clock, anticlock = {}, {}
 
 def catcher_move(): # (0,0) 방향 나중에 생각해보기
-    dx, dy = [-1,0,1,0], [0,1,0,-1] #위, 오른쪽, 아래, 왼쪽
     x, y, d, cnt = N//2, N//2, 0, 1
     flag = True
 
@@ -87,7 +86,7 @@ def catcher_move(): # (0,0) 방향 나중에 생각해보기
             d = (d-1)%4
             anticlock[(x_,y_)][-1] = d
         cnt -= 1
-    anticlock[(N//2-1,N//2)][-1] = 2
+    anticlock[(N//2-1,N//2)][-1] = 0
 
 def second():
     global clock_flag, POINT, R, C
@@ -112,6 +111,7 @@ def second():
         x, y = x+dx[d], y+dy[d]
 
 catcher_move()
+
 R,C = N//2, N//2
 POINT, TURN = 0, 1
 clock_flag = 1
