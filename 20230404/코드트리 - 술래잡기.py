@@ -1,6 +1,3 @@
-import sys
-sys.stdin = open('input.txt','rt')
-
 N,M,H,K = map(int,input().split()) #m 도망자 H나무 K턴
 
 dx,dy = [-1,0,1,0],[0,1,0,-1] #위, 오, 아래, 왼
@@ -30,8 +27,7 @@ def first():
         for y in range(N):
             dist = abs(R-x) + abs(C-y)
             if dist > 3:
-                for d in arr[x][y]:
-                    arr_[x][y].append(d)
+                arr_[x][y] = arr[x][y][:]
                 continue
 
             for d in arr[x][y]:
