@@ -130,3 +130,5 @@ def simulation():
 while FLAG:
     simulation()
 print(TIME-1)
+
+유림아 어디갔어????/ 모하눈고야...!!!!
